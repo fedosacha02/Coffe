@@ -1,12 +1,15 @@
 import "./app-info.css";
+import Break from "../../Break/break";
 
 function AppInfo({appInfoData, icon}){
     return(
-        <figure>
+        <figure className="app-info">
             <img src={appInfoData.photo} alt={appInfoData.title}/>
-            <figcaption><h2>{appInfoData.title}</h2></figcaption>
-            <img src={icon} alt=""/>
-            <p>{appInfoData.text}</p>
+            <div>
+                <figcaption><h2>{appInfoData.title}</h2></figcaption>
+                <Break icon={icon}></Break>
+                <p>{appInfoData.text}</p>
+            </div>
         </figure>
     )
 }

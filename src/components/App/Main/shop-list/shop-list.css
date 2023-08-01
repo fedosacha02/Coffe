@@ -1,0 +1,12 @@
+.filter-panel{
+    display: flex;
+
+}
+.filter-panel *{
+    margin: 10px;
+}
+.shop-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import "./App.css";
 import Header from "./Header/header";
 import Main from "./Main/main";
 import Footer from "./Footer/footer";
@@ -35,6 +35,12 @@ class App extends Component{
             shopData: [
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99}
             ],
             theme: {
@@ -48,11 +54,11 @@ class App extends Component{
     render(){
         const {menu, headerData, appInfoData, shopData, theme} = this.state;
         return(
-            <>
+            <div className="container">
                 <Header headerData = {headerData} menu = {menu} icon = {theme.light_icon}/>
                 <Main shopData = {shopData} appInfoData = {appInfoData} icon = {theme.dark_icon}/>
                 <Footer menu = {menu} menu_icon = {theme.light_dark_icon} footer_icon = {theme.dark_icon}/>
-            </>
+            </div>
         )
     }
     

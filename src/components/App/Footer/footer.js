@@ -6,7 +6,7 @@ function Footer({menu, menu_icon, footer_icon}){
 
     return(
         <footer>
-            <Menu menu={menu} icon={menu_icon}/>
+            <Menu menu={menu} icon={menu_icon} position="center"/>
             <Break icon = {footer_icon}/>
         </footer>
     )

@@ -1,0 +1,15 @@
+.app-info{
+    display: flex;
+}
+.app-info > img{
+    align-self: scretch;
+    margin-right: 25px;
+}
+.app-info > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app-info > div > p{
+    text-align: center;
+}
