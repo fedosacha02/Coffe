@@ -1,14 +1,18 @@
-function Nav({navigation}){
-    const elements = navigation.map(({title,path}, i) => {
-        return(
-            <a href={path} key={i}>{title}</a>
-        )
+import './menu.css'
+
+
+function Menu({menu, icon}){
+    const elements = menu.map(({title, path}, i) => {
+        if(!i) return  <li><img src={icon} alt=""/><a href={path} key={i}>{title}</a></li>;
+        return <li><a href={path} key={i}>{title}</a></li>
     })
     return(
         <nav>
-            {elements}
+            <ul>
+                {elements}
+            </ul>
         </nav>
     )
 }
 
-export default Nav;
+export default Menu;

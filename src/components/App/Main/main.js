@@ -1,10 +1,10 @@
 import AppInfo from "./app-info/app-info";
 import ShopList from "./shop-list/shop-list";
-
-function Main({shopData}){
+import "./main.css"
+function Main({appInfoData, shopData, icon}){
     return(
         <main>
-            <AppInfo/>
+            <AppInfo appInfoData = {appInfoData} icon={icon}/>
             <ShopList shopData = {shopData}/>
         </main>
     )

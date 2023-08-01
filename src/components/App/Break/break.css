@@ -1,0 +1,9 @@
+.thematic-break{
+    display: flex;
+    justify-content: center;
+}
+.thematic-break > div{
+    height: 0;
+    width: 5vw;
+    border: 1px solid black;
+}

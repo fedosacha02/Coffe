@@ -1,11 +1,12 @@
-import Nav from "../Menu/menu";
-import HeaderTitle from "./HeaderTitle/header-title"
-function Header({headerData, navigation}){
+import Menu from "../Menu/menu";
+import './header.css';
+
+function Header({headerData, menu, icon}){
     return(
-        <div>
-            <Nav navigation = {navigation}/>
-            <HeaderTitle headerTitle = {headerData.headerTitle}/>
-        </div>
+        <header style={{backgroundImage: `url(${headerData.background})`}}>
+            <Menu menu = {menu} icon = {icon}/>
+            <h1>{headerData.title}</h1>
+        </header>
     )
 }
 

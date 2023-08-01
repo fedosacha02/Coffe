@@ -1,0 +1,9 @@
+header{
+    display: flex;
+    height: 25vh;
+}
+header > h1{
+    font-size: 40px;
+    justify-self:center;
+    align-self: center;
+}

@@ -1,8 +1,12 @@
-function AppInfo(){
+import "./app-info.css";
+
+function AppInfo({appInfoData, icon}){
     return(
         <figure>
-            <img src={process.env.PUBLIC_URL + "/girl.jpg"} alt="About our beans"/>
-            <figcaption>About our beans</figcaption>
+            <img src={appInfoData.photo} alt={appInfoData.title}/>
+            <figcaption><h2>{appInfoData.title}</h2></figcaption>
+            <img src={icon} alt=""/>
+            <p>{appInfoData.text}</p>
         </figure>
     )
 }
