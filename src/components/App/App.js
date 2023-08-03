@@ -36,10 +36,10 @@ class App extends Component{
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
                 {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99}
             ],

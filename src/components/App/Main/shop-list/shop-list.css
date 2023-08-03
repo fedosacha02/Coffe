@@ -1,9 +1,10 @@
 .filter-panel{
     display: flex;
-
+    gap: 100px;
 }
 .filter-panel *{
-    margin: 10px;
+    padding: 10px;
+    margin-right: 100px;
 }
 .shop-list{
     display: flex;
