@@ -11,14 +11,19 @@ function ShopList({shopData}){
     const countries = Array.from(new Set(shopData.map((el => el.country))));
 
     return (
-        <div>
+        <div className="shop">
             <section className="filter-panel">
-                <label>Looking for<input placeholder="Start typing here..."></input></label>
+                <div className="search-panel">
+                    <p>Looking for</p>
+                    <input placeholder="Start typing here..."></input>
+                </div>
                 
-                <span>Or filter{countries.map((country, id) => <button key={id} value={country}>{country}</button>)}
-                </span>
+                <div className="button-panel">
+                    <p>Or filter</p>
+                    {countries.map((country, id) => <button key={id} value={country}>{country}</button>)}
+                </div>
             </section>
-            <section className="shop-list">
+            <section className="product-list">
                 {products}
             </section>
         </div>

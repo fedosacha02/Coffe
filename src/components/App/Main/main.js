@@ -5,6 +5,7 @@ function Main({appInfoData, shopData, icon}){
     return(
         <main>
             <AppInfo appInfoData = {appInfoData} icon={icon}/>
+            <div id="simple-break"></div>
             <ShopList shopData = {shopData}/>
         </main>
     )

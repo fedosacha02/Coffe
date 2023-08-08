@@ -2,9 +2,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10%;
+    gap: 40px;
 }
 
 main *{
     color: black;
+}
+
+#simple-break{
+    height: 0;
+    width: 15%;
+    border: 1px solid black;
 }

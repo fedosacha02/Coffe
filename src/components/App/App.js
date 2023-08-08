@@ -33,15 +33,15 @@ class App extends Component{
 
             },
             shopData: [
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
-                {name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99}
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "China", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Brazil", price: 6.99},
+                {photo: process.env.PUBLIC_URL + "/assets/aromistico-coffee.png", name: "AROMISTICO Coffee 1 kg", country: "Kenya", price: 6.99}
             ],
             theme: {
                 light_icon: process.env.PUBLIC_URL + "/assets/light-coffee-beans.svg",
