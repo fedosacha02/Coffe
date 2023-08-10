@@ -1,15 +1,10 @@
-import Menu from "../Menu/menu";
-import Break from "../Break/break"
 import "./footer.css"
 
-function Footer({menu, menu_icon, footer_icon}){
+export default function Footer({children: menu}){
 
     return(
         <footer>
-            <Menu menu={menu} icon={menu_icon} position="center"/>
-            <Break icon = {footer_icon}/>
+            {menu}
         </footer>
     )
 }
-
-export default Footer;

@@ -1,10 +1,14 @@
 import { Component } from "react";
-import "./App.css";
 import Header from "./Header/header";
 import Main from "./Main/main";
 import Footer from "./Footer/footer";
+import Break from "./Break/break";
+import Menu from "./Menu/menu";
+import AppInfo from "./Main/app-info/app-info";
+import ShopList from "./Main/shop-list/shop-list";
+import "./App.css";
 
-class App extends Component{
+export default class App extends Component{
     constructor(props){
         super(props);
 
@@ -18,7 +22,6 @@ class App extends Component{
             headerData: {
                 title: "Our Coffee",
                 background: process.env.PUBLIC_URL + "/assets/menu-background.png",
-                icon: process.env.PUBLIC_URL + "/assets/light-coffee-beans.svg"
             },
             appInfoData: {
                 title: "About our beans",
@@ -47,23 +50,51 @@ class App extends Component{
                 light_icon: process.env.PUBLIC_URL + "/assets/light-coffee-beans.svg",
                 dark_icon: process.env.PUBLIC_URL + "/assets/dark-coffee-beans.svg",
                 light_dark_icon: process.env.PUBLIC_URL + "/assets/light-dark-coffee-beans.svg",
-            }
+            },
+            term: "",
+            filter: ""
         }
     }
 
+    search = (items, term) => {
+        if(!term){
+            return items;
+        }
+        return items.filter(item => item.name.toLowerCase().includes(term.toLowerCase()))
+    }
+    updateTerm = (e) => {
+        const term = e.target.value;
+        this.setState(term);
+    }
+    filter = (items, filter) => {
+        if(filter){
+            return items.filter(item => item.name === filter)
+        }
+        return items;
+    }
+    filterSelect = (item) =>{
+        this.setState({item})
+    }
     render(){
-        const {menu, headerData, appInfoData, shopData, theme} = this.state;
+        const {menu, headerData, appInfoData, shopData, theme, term} = this.state;
+        const visibleProducts = this.search(shopData, term);
+
+
         return(
             <div className="container">
-                <Header headerData = {headerData} menu = {menu} icon = {theme.light_icon}/>
-                <Main shopData = {shopData} appInfoData = {appInfoData} icon = {theme.dark_icon}/>
-                <Footer menu = {menu} menu_icon = {theme.light_dark_icon} footer_icon = {theme.dark_icon}/>
+                <Header headerData = {headerData}>
+                    <Menu menu={menu} icon = {theme.light_icon}/>
+                </Header>
+                <Main>
+                    <AppInfo appInfoData={appInfoData} icon={theme.dark_icon}/>
+                    <ShopList shopData = {visibleProducts}/>
+                </Main>
+                <Footer>
+                    <Menu menu={menu} icon = {theme.light_dark_icon} position="center"/>
+                </Footer>
+                <Break icon = {theme.dark_icon}/>
             </div>
         )
     }
     
 }
-
-
-
-export default App;

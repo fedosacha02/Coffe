@@ -1,34 +1,31 @@
+
 import ShopListItem from "./shop-list-item/shop-list-item";
 import "./shop-list.css";
 
-function ShopList({shopData}){
-    const products = shopData.map((el, id) => {
-        return(
-        <ShopListItem key={id} {...el}>
-        </ShopListItem>
-        )
-    });
+export default function ShopList({shopData}){
+
     const countries = Array.from(new Set(shopData.map((el => el.country))));
 
+    const products = shopData.map((el, id) => {
+        return(
+            <ShopListItem key={id} {...el}/>
+        )
+    });
     return (
-        <div className="shop">
-            <section className="filter-panel">
-                <div className="search-panel">
+            <div className="shop">
+                <section className="filter-panel">
                     <p>Looking for</p>
-                    <input placeholder="Start typing here..."></input>
-                </div>
-                
-                <div className="button-panel">
+                    <div className="search-panel">
+                        <input placeholder="Start typing here..."></input>
+                    </div>
                     <p>Or filter</p>
-                    {countries.map((country, id) => <button key={id} value={country}>{country}</button>)}
-                </div>
-            </section>
-            <section className="product-list">
-                {products}
-            </section>
-        </div>
-        
-    )
+                    <div className="button-panel">
+                        {countries.map((country, id) => <button key={id} value={country}>{country}</button>)}
+                    </div>
+                </section>
+                <section className="product-list">
+                    {products}
+                </section>
+            </div>
+        )
 }
-
-export default ShopList;

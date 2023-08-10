@@ -1,14 +1,10 @@
-import AppInfo from "./app-info/app-info";
-import ShopList from "./shop-list/shop-list";
 import "./main.css"
-function Main({appInfoData, shopData, icon}){
+export default function Main({children}){
     return(
         <main>
-            <AppInfo appInfoData = {appInfoData} icon={icon}/>
+            {children[0]}
             <div id="simple-break"></div>
-            <ShopList shopData = {shopData}/>
+            {children[1]}
         </main>
     )
 }
-
-export default Main;

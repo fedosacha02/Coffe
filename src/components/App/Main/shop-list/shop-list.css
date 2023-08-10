@@ -6,7 +6,7 @@
 .filter-panel{
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
 }
 .filter-panel *{
     background-color: white;
